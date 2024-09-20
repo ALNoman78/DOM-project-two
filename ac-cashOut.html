@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Page</title>
+    <link rel="shortcut icon" href="./asste/payoo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+        <!-- money show start -->
+        <div class="stats flex my-2 gap-4">
+            <div class="stat">
+                <img src="./asste/Group.png" alt="">
+            </div>
+            <div class="stat">
+                <div id="balance" class="stat-value text-2xl font-bold">4200</div>
+                <div class="stat-title">Available Balance</div>
+            </div>
+        </div>
+        <!-- money show end -->
+        <div class="grid md:grid-cols-3 grid-cols-2 gap-3">
+            <div id="show-add-money" class="w-[120px] flex flex-col justify-center items-center cursor-pointer  border border-solid rounded-xl h-[100px] bg-white ">
+                <img class="w-8" src="./asste/wallet 1.png" alt="">
+                <p>Add Money</p>
+            </div>
+            <div id="cash-out-click" class="w-[120px] flex flex-col justify-center items-center cursor-pointer  border border-solid rounded-xl h-[100px] bg-white ">
+                <img class="w-8" src="./asste/send 1.png" alt="">
+                <p>Cashout</p>
+            </div>
+            <div
+                class="w-[120px] flex flex-col justify-center items-center cursor-pointer  border border-solid rounded-xl h-[100px] bg-white ">
+                <img class="w-8" src="./asste/money 1.png" alt="">
+                <p>Transfer Money</p>
+            </div>
+            <div
+                class="w-[120px] flex flex-col justify-center items-center cursor-pointer  border border-solid rounded-xl h-[100px] bg-white ">
+                <img class="w-8" src="./asste/financial 1.png" alt="">
+                <p>Bonus</p>
+            </div>
+            <div
+                class="w-[120px] flex flex-col justify-center items-center cursor-pointer  border border-solid rounded-xl h-[100px] bg-white ">
+                <img class="w-8" src="./asste/purse 1.png" alt="">
+                <p>Pay Bill</p>
+                <p></p>
+            </div>
+            <div
+                class="w-[120px] flex flex-col justify-center items-center cursor-pointer  border border-solid rounded-xl h-[100px] bg-white ">
+                <img class="w-8" src="./asste/transaction 1.png" alt="">
+                <p>Transaction</p>
+            </div>
+        </div>
+        <!-- add amount form -->
+        <form id="add-your-account" class="">
+            <h2 class="text-2xl font-bold mb-6 text-center mt-3">Add Money</h2>
+            <!-- Amount -->
+            <div class="mb-4">
+                <label for="amount" class="block text-sm font-medium text-gray-700">Amount</label>
+                <input type="text" id="amount" name="amount" placeholder="Enter amount"
+                    class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+
+            <!-- Bank Name -->
+            <div class="mb-4">
+                <label for="bank" class="block text-sm font-medium text-gray-700">Account Number</label>
+                <input id="amount-of-money" type="text" id="bank" name="bank" placeholder="Enter your bank"
+                    class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+
+            <!-- Account Number -->
+            <div class="mb-4">
+                <label for="account-number" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="pin-number" name="account-number" placeholder="Enter your account number"
+                    class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="mt-6">
+                <button id="add-money" type="submit"
+                    class="w-full px-4 py-2 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                    Add Money
+                </button>
+            </div>
+        </form>
+        <!--cash out form -->
+        <form id="show-cashout" class="hidden">
+            <h2 class="text-2xl font-bold mb-6 text-center mt-3">Add Money</h2>
+            <!-- Amount -->
+            <div class="mb-4">
+                <label for="amount" class="block text-sm font-medium text-gray-700">Amount</label>
+                <input type="text" id="cashOut-amount" name="amount" placeholder="Enter amount"
+                    class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+
+            <!-- Bank Name -->
+            <div class="mb-4">
+                <label for="bank" class="block text-sm font-medium text-gray-700">Account Number</label>
+                <input id="available-money" type="text" id="bank" name="bank" placeholder="Enter your bank"
+                    class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+
+            <!-- Account Number -->
+            <div class="mb-4">
+                <label for="account-number" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="account-number" placeholder="Enter your account number"
+                    class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="mt-6 ">
+                <button id="submit-cashOut" type="submit"
+                    class="w-full px-4 py-2 bg-orange-500 text-white font-bold rounded-md ">
+                    Cash Out
+                </button>
+            </div>
+        </form>
+    </div>
+    <script src="./js/ac-delatis.js"></script>
+    <script src="./js/ac-cashOut.js"></script>
+    <script src="./js/features.js"></script>
+</body>
+
+</html>
