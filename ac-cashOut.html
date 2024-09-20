@@ -38,18 +38,18 @@
                 <img class="w-8" src="./asste/money 1.png" alt="">
                 <p>Transfer Money</p>
             </div>
-            <div
+            <div id="bonus-section"
                 class="w-[120px] flex flex-col justify-center items-center cursor-pointer  border border-solid rounded-xl h-[100px] bg-white ">
                 <img class="w-8" src="./asste/financial 1.png" alt="">
                 <p>Bonus</p>
             </div>
-            <div
+            <div id="pay-bill-section"
                 class="w-[120px] flex flex-col justify-center items-center cursor-pointer  border border-solid rounded-xl h-[100px] bg-white ">
                 <img class="w-8" src="./asste/purse 1.png" alt="">
                 <p>Pay Bill</p>
                 <p></p>
             </div>
-            <div
+            <div id="transaction-section"
                 class="w-[120px] flex flex-col justify-center items-center cursor-pointer  border border-solid rounded-xl h-[100px] bg-white ">
                 <img class="w-8" src="./asste/transaction 1.png" alt="">
                 <p>Transaction</p>
@@ -92,7 +92,7 @@
             <h2 class="text-2xl font-bold mb-6 text-center mt-3">Add Money</h2>
             <!-- Amount -->
             <div class="mb-4">
-                <label for="amount" class="block text-sm font-medium text-gray-700">Amount</label>
+                <label for="amount" class="block text-sm font-medium text-gray-700">Cash out Amount</label>
                 <input type="text" id="cashOut-amount" name="amount" placeholder="Enter amount"
                     class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
             </div>
@@ -107,7 +107,8 @@
             <!-- Account Number -->
             <div class="mb-4">
                 <label for="account-number" class="block text-sm font-medium text-gray-700">Password</label>
-                <input type="password" id="password" name="account-number" placeholder="Enter your account number"
+                <input type="password" id="cashOut-password" name="account-number"
+                    placeholder="Enter your account number"
                     class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
             </div>
 
@@ -120,14 +121,56 @@
             </div>
         </form>
         <!-- transfer section start -->
-        <section id="show-transfer" class="transfer-container hidden">
-            <h2>Transfer Content</h2>
-        </section>
+        <form id="show-transfer" class="hidden">
+            <h2 class="text-2xl font-bold mb-6 text-center mt-3">Transfer Money</h2>
+            <!-- Amount -->
+            <div class="mb-4">
+                <label for="amount" class="block text-sm font-medium text-gray-700">Amount</label>
+                <input type="text" id="transfer-amount" name="amount" placeholder="Enter amount"
+                    class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+
+            <!-- Bank Name -->
+            <div class="mb-4">
+                <label for="bank" class="block text-sm font-medium text-gray-700">Account Number</label>
+                <input id="transfer-available-money" type="text" id="bank" name="bank" placeholder="Enter your bank"
+                    class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+
+            <!-- Account Number -->
+            <div class="mb-4">
+                <label for="account-number" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="transfer-password" name="account-number"
+                    placeholder="Enter your account number"
+                    class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="mt-6 ">
+                <button id="submit-transfer" type="submit"
+                    class="w-full px-4 py-2 bg-red-500 text-white font-bold rounded-md ">
+                    Cash Out
+                </button>
+            </div>
+        </form>
         <!-- transfer section end -->
         <!-- get bonus section end -->
-        <section id="show-bonus" class="bonus-conatiner hidden">
-            <h2>Bonus Content</h2>
-        </section>
+        <form id="show-bonus" class="hidden">
+            <h2 class="text-2xl font-bold mb-6 text-center mt-3">Transfer Money</h2>
+            <!-- Bank Name -->
+            <div class="mb-4">
+                <label for="bank" class="block text-sm font-medium text-gray-700">Reward Bonus</label>
+                <input id="coupon-money" type="text" id="bank" name="bank" placeholder="Enter your bank"
+                    class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+            </div>
+            <!-- Submit Button -->
+            <div class="mt-6 ">
+                <button id="submit-coupon-bonus" type="submit"
+                    class="w-full px-4 py-2 bg-red-500 text-white font-bold rounded-md ">
+                    Cash Out
+                </button>
+            </div>
+        </form>
         <!-- pay bill -->
         <section id="show-pay-bill" class="bonus-conatiner hidden">
             <h2>Pay Bill content</h2>
@@ -136,6 +179,9 @@
         <!-- transaction section start -->
         <section id="show-transaction" class=" transaction-container hidden">
             <h2>Transaction Content</h2>
+            <div id="transaction-container" class="space-y-2">
+
+            </div>
         </section>
         <!-- transaction section end -->
     </div>
@@ -145,6 +191,9 @@
     <script src="./js/utilites.js"></script>
     <script src="./js/normal form.js"></script>
     <script src="./js/hidden-section.js"></script>
+    <script src="./js/cash-out.js"></script>
+    <script src="./js/transfer-amount.js"></script>
+    <script src="./js/bonus.js"></script>
 </body>
 
 </html>
